@@ -30,7 +30,7 @@ pip install scipy torchmetrics tensorboardX opencv-python tqdm
 ## Training
 - It accepts Vimeo-like data directory for train, you need to pass argument for --train_data
 
-'''
+```
 film-pytorch
 └── datasets
       └── vimeo_triplet
@@ -38,9 +38,9 @@ film-pytorch
           readme.txt
           tri_testlist.txt
           tri_trainlist.txt
-'''
+```
 - for training, you can specify batch_size, epoch, resume(for loading checkpoint), exp_name
-'''
+```
 python train.py --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
-'''
+```
 - It shows comparable performances as reported by original paper (PSNR ~ 34 on Vimeo90K)
