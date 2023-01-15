@@ -44,6 +44,6 @@ film-pytorch
 ```
 - for training, you can specify batch_size, epoch, resume(for loading checkpoint), exp_name
 ```
-python train.py --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
+python train.py --train_data datasets/vimeo_triplet --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
 ```
 
