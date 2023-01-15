@@ -1,5 +1,8 @@
 # FILM-pytorch
-(Easy to use) PyTorch Implementation of FILM: Frame Interpolation for Large Motion
+- PyTorch Implementation of FILM: Frame Interpolation for Large Motion (https://film-net.github.io/)
+- Easy to use, read, debug than original TF code
+- It shows comparable performances as reported by original paper (PSNR ~ 34 on Vimeo90K)
+- Tensorboard logging for metrics(PSNR, SSIM), generated images (x0, prediction, ground truth, x1)
 
 ## Requirements
 - Python 3.11.0
@@ -43,4 +46,4 @@ film-pytorch
 ```
 python train.py --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
 ```
-- It shows comparable performances as reported by original paper (PSNR ~ 34 on Vimeo90K)
+
