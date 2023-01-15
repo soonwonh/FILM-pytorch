@@ -34,6 +34,8 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=2, help='batch size')
     parser.add_argument('--epoch', type=int, default=100, help='batch size')
     parser.add_argument('--log_img', type=str, default='log_img', help='path to save image')
+    parser.add_argument('--need_patch', type=bool, default=False, help='whether to use patch or full resol. image')
+    parser.add_argument('--patch_size', type=int, default=256, help='patch size')
 
     return parser.parse_args()
 
