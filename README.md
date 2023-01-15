@@ -42,7 +42,7 @@ film-pytorch
           tri_testlist.txt
           tri_trainlist.txt
 ```
-- for training, you can specify batch_size, epoch, resume(for loading checkpoint), exp_name
+- for training, you can specify train_data path, batch_size, epoch, resume(for loading checkpoint), exp_name
 ```
 python train.py --train_data datasets/vimeo_triplet --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
 ```
