@@ -27,7 +27,7 @@ def parse_args():
     parser.add_argument('--checkpoint_dir', type=str, default='checkpoint_dir', help='path to save checkpoint')
     parser.add_argument('--log_dir', type=str, default='log_dir', help='path to save tensorboard log')
     parser.add_argument('--train_data', type=str, default='./datasets/vimeo_triplet', help='path to train data')
-    parser.add_argument('--batch_size', type=int, default=2, help='batch size')
+    parser.add_argument('--batch_size', type=int, default=8, help='batch size')
     parser.add_argument('--epoch', type=int, default=100, help='batch size')
     parser.add_argument('--log_img', type=str, default='log_img', help='path to save image')
     parser.add_argument('--need_patch', type=bool, default=False, help='whether to use patch or full resol. image')
