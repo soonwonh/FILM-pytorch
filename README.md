@@ -47,3 +47,29 @@ film-pytorch
 python train.py --train_data datasets/vimeo_triplet --exp_name 230115_exp1 --batch_size 8 --epoch 100 --resume 'path to checkpoint'
 ```
 
+## Inference
+to be released very soon (in progress)
+*  1) One mid-frame interpolation
+
+To generate an intermediate photo from the input near-duplicate photos, simply run:
+
+```
+python inference.py --frame1 data/one.png --frame2 data/two.png --model_path pretrained/film_style --output temp/output.png
+```
+
+This will produce the sub-frame at `t=0.5` and save as 'photos/output_middle.png'.
+
+*  2) Many in-between frames interpolation
+
+It takes in a set of directories identified by a glob (--pattern). Each directory
+is expected to contain at least two input frames, with each contiguous frame
+pair treated as an input to generate in-between frames. Frames should be named such that when sorted (naturally) with `natsort`, their desired order is unchanged.
+
+
+```
+python inference.py --data "photos" --model_path pretrained/film_style --times_to_interpolate 3 --output_video
+```
+
+You will find the interpolated frames (including the input frames) in
+'photos/interpolated_frames/', and the interpolated video at
+'photos/interpolated.mp4'.
