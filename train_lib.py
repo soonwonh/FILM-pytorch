@@ -9,7 +9,6 @@ from utils import to_gpu, save_checkpoint, load_checkpoint, metrics, log_image
 def train(args, model, summary, optimizer, create_losses_fn, dataloader, eval_loop_fn=None, eval_datasets=None, resume=None):
 
     loss_functions = create_losses_fn(['l1', 'perceptual'])
-    #metrics = create_metrics_fn()
     PSNR = PeakSignalNoiseRatio().cuda()
     SSIM = StructuralSimilarityIndexMeasure().cuda()
 
