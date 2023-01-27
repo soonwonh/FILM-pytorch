@@ -1,4 +1,4 @@
-# FILM-pytorch
+# Pytorch Implementation of FILM: Frame Interpolation for Large Motion
 - PyTorch Implementation of FILM: Frame Interpolation for Large Motion (https://film-net.github.io/)
 - Easy to use, read, debug than original TF code
 - It shows comparable performances as reported by original paper (PSNR ~ 34 on Vimeo90K)
